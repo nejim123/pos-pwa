@@ -43,6 +43,7 @@ import PWAComponent from "../../components/admin/settings/pwa/PWAComponent";
 import WhatsappComponent from "../../components/admin/settings/Whatsapp/WhatsappComponent"
 import WhatsappListComponent from "../../components/admin/settings/Whatsapp/WhatsappListComponent";
 import LicenseComponent from "../../components/admin/settings/License/LicenseComponent";
+import PaymentGatewaySettingsComponent from "../../components/admin/settings/PaymentGatewaySettingsComponent";
 
 
 export default [
@@ -577,5 +578,16 @@ export default [
                 }
             },
         ],
+    },
+    {
+        path: "/admin/settings/stripe-connect",
+        component: PaymentGatewaySettingsComponent,
+        name: "admin.settings.stripe-connect",
+        meta: {
+            isFrontend: false,
+            auth: true,
+            permissionUrl: "settings",
+            breadcrumb: "settings"
+        }
     },
 ];

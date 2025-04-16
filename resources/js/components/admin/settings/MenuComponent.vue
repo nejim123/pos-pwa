@@ -98,6 +98,10 @@
                 <i class="lab lab-payment-gateway text-sm"></i>
                 {{ $t("menu.payment_gateway") }}
             </router-link>
+            <router-link :to="{ name: 'admin.settings.stripe-connect' }" class="db-tab-btn">
+                <i class="fab fa-stripe text-sm"></i>
+                {{ $t("menu.stripe_connect") }}
+            </router-link>
             <router-link :to="{ name: 'admin.settings.pwa' }" class="db-tab-btn">
                 <i class="lab lab-monitor-mobbile text-sm"></i>
                 {{ $t("menu.progressive_web_app") }}

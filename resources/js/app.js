@@ -16,6 +16,7 @@ import VueNextSelect from 'vue-next-select';
 import VueApexCharts from "vue3-apexcharts";
 import 'vue-next-select/dist/index.css';
 import ENV from './config/env';
+import StripeConnectButtonComponent from './components/admin/payments/StripeConnectButtonComponent';
 
 
 /* Start tooltip alert code */
@@ -58,7 +59,8 @@ axios.interceptors.request.use(
 
 const app = createApp({});
 app.component('default-component', DefaultComponent);
-app.component('vue-select', VueNextSelect)
+app.component('vue-select', VueNextSelect);
+app.component('stripe-connect-button', StripeConnectButtonComponent);
 app.use(router)
 app.use(store)
 app.use(VueSimpleAlert)
